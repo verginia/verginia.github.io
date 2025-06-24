@@ -1,38 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Personal Page</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <img src="img/4481.jpg" alt="My Photo">
-    <h1>Verginia Stolear</h1>
-    <p>Front-End Developer</p>
-  </header>
+  <div class="container">
+    <!-- Coloana stânga -->
+    <aside class="sidebar">
+      <img src="img/4481.jpg" alt="Poză Profil" class="profile-pic" />
+      <section class="contact">
+        <h2 data-ro="Contacte" data-en="Contact">Contacte</h2>
+        <hr />
+        <p><i class="icon-location"></i> <span data-ro="Or. Chisinau" data-en="Chisinau City">Or. Chisinau</span></p>
+        <p><i class="icon-phone"></i> +373 69437339</p>
+        <p><i class="icon-email"></i> geenika@gmail.com</p>
+        <p><i class="icon-linkedin"></i> <a href="#">LinkedIn</a></p>
+        <p><i class="icon-github"></i> <a href="#">GitHub</a></p>
+      </section>
+      <br>
+      <section class="education">
+        <h2 data-ro="Educatie" data-en="Education">Educatie</h2>
+        <hr />
+        <p><strong data-ro="Studii Superioare" data-en="Higher Education">Studii Superioare</strong><br />, </p>
+      </section>
+      <br>
+      <section class="datetime">
+        <h2 data-ro="Data și ora" data-en="Date and Time">Data și ora</h2>
+        <hr />
+        <p id="datetime"></p>
+      </section>
+    </aside>
 
-  <main>
-    <section>
-      <h2>About me</h2>
-      <p>Sunt un Front-End Developer pasionat de tehnologie...</p>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Store v.03</strong> - Express, MySQL, Bootstrap</li>
-        <li><strong>Aplicatie CMC</strong> - NodeJS, Autentificare</li>
-        <!-- Adaugă restul proiectelor tale aici -->
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Verginia Stolear</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <!-- Coloana dreapta -->
+    <main class="content">
+      <header>
+        <h1>Verginia Stolear</h1>
+        <h2 data-ro="Front-End Developer" data-en="Front-End Developer">Front-End Developer</h2>
+        <div class="buttons">
+          <select id="theme-toggle">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+          <select id="language-toggle">
+            <option value="ro">RO</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+      </header>
+      <hr />
+      <section id="about">
+        <h2 data-ro="Despre mine" data-en="About me">Despre mine</h2>
+        <p id="about-text"></p>
+      </section>
+      <hr />
+      <section id="js-projects">
+        <h2 data-ro="Proiecte în JavaScript" data-en="JavaScript Projects">Proiecte în JavaScript</h2>
+        <!-- proiecte JS -->
+      </section>
+      <hr />
+      <section id="projects">
+        <h2 data-ro="Proiecte realizate" data-en="Completed Projects">Proiecte realizate</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>05.05.2025 – Baza </h3>
+              <p>Proiect cu , React, .</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>15.04.2025 – Store v.03</h3>
+              <p>Proiect , Bootstrap, .</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>30.03.2025 – Aplicatie </h3>
+              <p>Proiect cu NodeJS, autentificare și rapoarte.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>04.03.2025 – Store v.02</h3>
+              <p>Proiect cu React.js, </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section id="certificates">
+        <h2 data-ro="Certificate" data-en="Certificates">Certificate</h2>
+        <img src="certificat1.jpg" alt="Certificat 1" />
+        <img src="certificat2.jpg" alt="Certificat 2" />
+      </section>
+      <hr />
+      <footer>
+        <p>&copy; <span id="year"></span> Verginia Stolear</p>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>

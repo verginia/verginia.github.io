@@ -1,25 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: sans-serif;
-  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: #f4f4f4;
   color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.sidebar {
+  width: 33%;
+  background-color: #2c4a5e;
+  color: white;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.sidebar a {
+  color: #cceaff;
+  text-decoration: none;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.content {
+  width: 67%;
+  background-color: white;
   padding: 20px;
 }
 
-header {
-  text-align: center;
+h1, h2 {
+  color: #2677ac;
 }
 
-img {
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  border: 1px solid #2c4a5e;
+  background: none;
+  cursor: pointer;
+  color: #2c4a5e;
+}
+
+button:hover {
+  background-color: #2c4a5e;
+  color: white;
+}
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 30px;
+  border-left: 2px solid #2c4a5e;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #2c4a5e;
   border-radius: 50%;
-  width: 150px;
+  position: absolute;
+  left: -8px;
+  top: 5px;
+  border: 2px solid white;
 }
 
-main {
-  max-width: 700px;
-  margin: 0 auto;
+.timeline-content h3 {
+  margin-bottom: 5px;
+  font-size: 1.1em;
+  color: #2c4a5e;
 }
 
-footer {
-  text-align: center;
-  margin-top: 40px;
+.timeline-content p {
+  margin: 0;
+  font-size: 0.95em;
+}
+
+/* Dark theme */
+body.dark {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+
+body.dark .content {
+  background-color: #2b2b2b;
+}
+
+body.dark .sidebar {
+  background-color: #111;
+}
+
+body.dark button {
+  border-color: #eee;
+  color: #eee;
+}
+
+body.dark button:hover {
+  background-color: #eee;
+  color: #111;
+}
+
+body.dark .timeline {
+  border-color: #eee;
+}
+
+body.dark .timeline-dot {
+  background-color: #eee;
+  border-color: #2b2b2b;
 }
