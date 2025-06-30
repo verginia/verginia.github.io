@@ -3,109 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal Page</title>
+  <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
+  <header class="site-header">
+    <h1>My Portfolio</h1>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#about">About me</a></li>
+        <li><a href="#html-css-projects">Proiecte HTML & CSS</a></li>
+        <li><a href="#js-projects">Proiecte in JS</a></li>
+        <li><a href="#projects">Proiecte</a></li>
+        <li><a href="#contact">Contacte</a></li>
+        <li><a href="#certificates">Certificate</a></li>
+        <li><a href="#recommendations">Recomandari</a></li>
+      </ul>
+      <div class="dropdowns">
+        <select id="language-toggle">
+          <option value="ro">RO</option>
+          <option value="en">EN</option>
+        </select>
+        <select id="theme-toggle">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+    </nav>
+  </header>
   <div class="container">
-    <!-- Coloana stânga -->
-    <aside class="sidebar">
+    <div class="left-sidebar">
       <img src="img/4481.jpg" alt="Poză Profil" class="profile-pic" />
-      <section class="contact">
+      <section id="contact">
         <h2 data-ro="Contacte" data-en="Contact">Contacte</h2>
-        <hr />
-        <p><i class="icon-location"></i> <span data-ro="Or. Chisinau" data-en="Chisinau City">Or. Chisinau</span></p>
-        <p><i class="icon-phone"></i> +373 69437339</p>
-        <p><i class="icon-email"></i> geenika@gmail.com</p>
-        <p><i class="icon-linkedin"></i> <a href="#">LinkedIn</a></p>
-        <p><i class="icon-github"></i> <a href="#">GitHub</a></p>
+        <hr>
+        <!-- Location -->
+          <div>
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="12"/>
+              <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0  
+                9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+            </svg>
+            <span data-ro="Or. Chisinau" data-en="Chisinau City">Or. Chisinau</span>
+          </div>
+          <!-- Phone -->
+          <div>
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="12"/>
+              <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.11-.21c1.21.49 
+                2.53.76 3.88.76a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C10.29 21.5 2.5 13.71 2.5 4a1 1 0 0 1 
+                1-1H7a1 1 0 0 1 1 1c0 1.35.27 2.67.76 3.88a1 1 0 0 1-.21 1.11l-2.2 2.2z"/>
+            </svg>
+            +373 69437339
+          </div>
+          <!-- Email -->
+          <div>
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="12"/>
+              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 
+                4-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            geenika@gmail.com
+          </div>
+          <!-- LinkedIn -->
+          <div>
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="12"/>
+              <path d="M8 17H5V9h3v8zm-1.5-9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM19 
+                17h-3v-4c0-1.1-.9-2-2-2s-2 .9-2 2v4h-3V9h3v1.1a3 3 0 0 1 5 1.9V17z"/>
+            </svg>
+            <a href="https://www.linkedin.com/in/verginia-stolear-b728a8135/" target="_blank">LinkedIn</a>
+          </div>
+          <!-- GitHub -->
+          <div>
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="12"/>
+              <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 
+                9.67.5.1.68-.22.68-.48v-1.68c-2.78.62-3.37-1.37-3.37-1.37-.45-1.17-1.1-1.48-1.1-1.48-.9-.63.07-.62.07-.62 
+                1 .07 1.53 1.06 1.53 1.06.89 1.55 2.34 1.1 2.91.84.09-.67.35-1.1.63-1.35-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 
+                1.03-2.74-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.03A9.28 9.28 0 0 1 12 
+                7.04c.85.004 1.71.11 2.5.32 1.91-1.31 2.75-1.03 2.75-1.03.55 1.4.2 2.44.1 2.7.64.7 1.03 
+                1.62 1.03 2.74 0 3.92-2.34 4.78-4.57 5.04.36.32.69.95.69 1.92v2.84c0 .27.18.59.69.48A10.3 
+                10.3 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
+            </svg>
+            <a href="https://github.com/verginia/verginia.github.io" target="_blank">GitHub</a>
+          </div>
+          <!-- Personal Page -->
+          <div>
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="12"/>
+              <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.93 6h-3.17a15.84 15.84 0 
+                00-1.27-3.34A8.03 8.03 0 0118.93 8zM12 4.07A13.62 13.62 0 0113.44 8H10.56A13.62 
+                13.62 0 0112 4.07zM9.51 8H6.07a8.03 8.03 0 013.44-3.34A15.84 15.84 0 009.51 8zM4.07 
+                10h3.7c-.05.66-.07 1.32-.07 2s.02 1.34.07 2h-3.7A7.96 7.96 0 014.07 10zm2 6h3.44c.28 
+                1.18.68 2.32 1.27 3.34A8.03 8.03 0 016.07 16zm5.93 3.93A13.62 13.62 0 0110.56 
+                16h2.88A13.62 13.62 0 0112 19.93zm2.93-0.59c.59-1.02.99-2.16 1.27-3.34h3.44a8.03 8.03 0 
+                01-4.71 3.34zM16.3 14c.05-.66.07-1.32.07-2s-.02-1.34-.07-2h3.63a7.96 7.96 0 010 4h-3.63z"/>
+            </svg>
+            <a href="https://verginia-github-io.vercel.app" target="_blank">
+              <span data-ro="Pagina personală" data-en="Personal page"></span>
+            </a>
+          </div>
       </section>
-      <br>
       <section class="education">
         <h2 data-ro="Educatie" data-en="Education">Educatie</h2>
-        <hr />
-        <p><strong data-ro="Studii Superioare" data-en="Higher Education">Studii Superioare</strong><br />, </p>
+        <hr>
+        <!-- education info -->
       </section>
-      <br>
       <section class="datetime">
         <h2 data-ro="Data și ora" data-en="Date and Time">Data și ora</h2>
-        <hr />
+        <hr>
         <p id="datetime"></p>
       </section>
-    </aside>
+    </div>
 
-    <!-- Coloana dreapta -->
-    <main class="content">
-      <header>
-        <h1>Verginia Stolear</h1>
-        <h2 data-ro="Front-End Developer" data-en="Front-End Developer">Front-End Developer</h2>
-        <div class="buttons">
-          <select id="theme-toggle">
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-          </select>
-          <select id="language-toggle">
-            <option value="ro">RO</option>
-            <option value="en">EN</option>
-          </select>
-        </div>
-      </header>
-      <hr />
+    <div class="main-content">
       <section id="about">
         <h2 data-ro="Despre mine" data-en="About me">Despre mine</h2>
+        <hr>
         <p id="about-text"></p>
       </section>
-      <hr />
+      <section id="html-css-projects">
+        <h2 data-ro="Proiecte HTML & CSS" data-en="HTML & CSS Projects">Proiecte HTML & CSS</h2>
+        <hr>
+        <!-- HTML/CSS Projects -->
+      </section>
       <section id="js-projects">
         <h2 data-ro="Proiecte în JavaScript" data-en="JavaScript Projects">Proiecte în JavaScript</h2>
-        <!-- proiecte JS -->
+        <hr>
+        <!-- JS Projects -->
       </section>
-      <hr />
       <section id="projects">
         <h2 data-ro="Proiecte realizate" data-en="Completed Projects">Proiecte realizate</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>05.05.2025 – Baza </h3>
-              <p>Proiect cu , React, .</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>15.04.2025 – Store v.03</h3>
-              <p>Proiect , Bootstrap, .</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>30.03.2025 – Aplicatie </h3>
-              <p>Proiect cu NodeJS, autentificare și rapoarte.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>04.03.2025 – Store v.02</h3>
-              <p>Proiect cu React.js, </p>
-            </div>
-          </div>
-        </div>
+        <hr>
+        <!-- timeline -->
       </section>
-      <hr />
       <section id="certificates">
         <h2 data-ro="Certificate" data-en="Certificates">Certificate</h2>
-        <img src="certificat1.jpg" alt="Certificat 1" />
-        <img src="certificat2.jpg" alt="Certificat 2" />
+        <hr>
+        <!-- images -->
       </section>
-      <hr />
-      <footer>
-        <p>&copy; <span id="year"></span> Verginia Stolear</p>
-      </footer>
-    </main>
+      <section id="recommendations">
+        <h2 data-ro="Recomandari" data-en="Recommendations">Recomandari</h2>
+        <hr>
+        <!-- recommendations -->
+      </section>
+    </div>
   </div>
+  <footer>
+      <p>&copy; <span id="year"></span> Verginia Stolear</p>
+  </footer>
 </body>
 </html>
