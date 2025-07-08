@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const scrollTopBtn = document.createElement("button");
   scrollTopBtn.id = "scrollTopBtn";
-  scrollTopBtn.innerHTML = "⬆ <span class='scroll-label'>Aloft</span>";
+  scrollTopBtn.innerHTML = "⬆ <span class='scroll-label'>Back to top</span>";
   scrollTopBtn.style.position = "fixed";
   scrollTopBtn.style.bottom = "30px";
   scrollTopBtn.style.right = "30px";
@@ -38,35 +38,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const data = {
-    ro: {
-      about: "Un Front-End Developer este persoana care implementează designul web folosind HTML, CSS și JavaScript.",
-      header: "Portofoliul Meu",
-      nav: [
-        "Despre mine",
-        "Proiecte HTML & CSS",
-        "Proiecte în JS",
-        "Proiecte",
-        "Contacte",
-        "Certificate",
-        "Recomandări"
-      ],
-      scroll: "Sus"
-    },
-    en: {
-      about: "A Front-End Developer is a person who implements web design using HTML, CSS, and JavaScript.",
-      header: "My Portfolio",
-      nav: [
-        "About me",
-        "HTML & CSS Projects",
-        "JS Projects",
-        "Projects",
-        "Contact",
-        "Certificates",
-        "Recommendations"
-      ],
-      scroll: "Aloft"
-    },
-  };
+  ro: {
+    about: `
+      Pasionată de designul interfețelor (UI), cu cunoștințe de bază în HTML, CSS și JavaScript.
+      Am finalizat un curs de UI axat pe layouturi responsive și principii de utilizabilitate.
+      Caut un stagiu de practică pentru a aplica gândirea orientată spre design și pentru a
+      dobândi experiență practică în crearea de interfețe intuitive și ușor de utilizat.
+    `,
+    header: "Portofoliul Meu",
+    nav: [
+      "Despre mine",
+      "Proiecte HTML & CSS",
+      "Proiecte în JS",
+      "Proiecte",
+      "Contacte",
+      "Certificate",
+      "Recomandări"
+    ],
+    scroll: "Sus"
+  },
+  en: {
+    about: `
+      Passionate UI design enthusiast with foundational skills in HTML, CSS, JavaScript.
+      Completed a UI course with a focus on responsive layouts and usability principles.
+      Seeking an internship to apply design thinking and gain hands-on experience in
+      creating intuitive, user-friendly interfaces.
+    `,
+    header: "My Portfolio",
+    nav: [
+      "About me",
+      "HTML & CSS Projects",
+      "JS Projects",
+      "Projects",
+      "Contact",
+      "Certificates",
+      "Recommendations"
+    ],
+    scroll: "Back to top"
+  },
+};
 
   function renderLanguage() {
     const currentLang = langToggle.value;
