@@ -39,12 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const data = {
   ro: {
-    about: `
-      Pasionată de designul interfețelor (UI), cu cunoștințe de bază în HTML, CSS și JavaScript.
-      Am finalizat un curs de UI axat pe layouturi responsive și principii de utilizabilitate.
-      Caut un stagiu de practică pentru a aplica gândirea orientată spre design și pentru a
-      dobândi experiență practică în crearea de interfețe intuitive și ușor de utilizat.
-    `,
     header: "Portofoliul Meu",
     nav: [
       "Despre mine",
@@ -58,12 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
     scroll: "Sus"
   },
   en: {
-    about: `
-      Passionate UI design enthusiast with foundational skills in HTML, CSS, JavaScript.
-      Completed a UI course with a focus on responsive layouts and usability principles.
-      Seeking an internship to apply design thinking and gain hands-on experience in
-      creating intuitive, user-friendly interfaces.
-    `,
     header: "My Portfolio",
     nav: [
       "About me",
@@ -80,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderLanguage() {
     const currentLang = langToggle.value;
-    aboutText.textContent = data[currentLang].about;
     siteHeader.textContent = data[currentLang].header;
     navLinks.forEach((link, i) => {
       link.textContent = data[currentLang].nav[i];
